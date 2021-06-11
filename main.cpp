@@ -30,26 +30,26 @@ string checkPos(int x, int y, int red[][6], int black[][6])
 void printBoard(int red[][6], int black[][6])
 {        //checkpos(0 =column, 5 =row)
     cout << "\n";
-    cout << "   ____ ____ ____ ____ ____ ____ " << endl;
-    cout << "  |    |    |    |    |    |    |" << endl;
-    cout << "5 | " << checkPos(0, 5, red, black) << " |    | " << checkPos(2, 5, red, black) << " |    | " << checkPos(4, 5, red, black) << " |    |" << endl;
-    cout << "  |____|____|____|____|____|____|" << endl;
-    cout << "  |    |    |    |    |    |    |" << endl;
-    cout << "4 |    | " << checkPos(1, 4, red, black) << " |    | " << checkPos(3, 4, red, black) << " |    | " << checkPos(5, 4, red, black) << " |" << endl;
-    cout << "  |____|____|____|____|____|____|" << endl;
-    cout << "  |    |    |    |    |    |    |" << endl;
-    cout << "3 | " << checkPos(0, 3, red, black) << " |    | " << checkPos(2, 3, red, black) << " |    | " << checkPos(4, 3, red, black) << " |    |" << endl;
-    cout << "  |____|____|____|____|____|____|" << endl;
-    cout << "  |    |    |    |    |    |    |" << endl;
-    cout << "2 |    | " << checkPos(1, 2, red, black) << " |    | " << checkPos(3, 2, red, black) << " |    | " << checkPos(5, 2, red, black) << " |" << endl;
-    cout << "  |____|____|____|____|____|____|" << endl;
-    cout << "  |    |    |    |    |    |    |" << endl;
-    cout << "1 | " << checkPos(0, 1, red, black) << " |    | " << checkPos(2, 1, red, black) << " |    | " << checkPos(4, 1, red, black) << " |    |" << endl;
-    cout << "  |____|____|____|____|____|____|" << endl;
-    cout << "  |    |    |    |    |    |    |" << endl;
-    cout << "0 |    | " << checkPos(1, 0, red, black) << " |    | " << checkPos(3, 0, red, black) << " |    | " << checkPos(5, 0, red, black) << " |" << endl;
-    cout << "  |____|____|____|____|____|____|" << endl;
-    cout << "    0    1    2    3    4    5   \n" << endl;
+    cout << "       ____ ____ ____ ____ ____ ____ " << endl;
+    cout << "       |    |    |    |    |    |    |" << endl;
+    cout << "     5 | " << checkPos(0, 5, red, black) << " |    | " << checkPos(2, 5, red, black) << " |    | " << checkPos(4, 5, red, black) << " |    |" << endl;
+    cout << "       |____|____|____|____|____|____|" << endl;
+    cout << "       |    |    |    |    |    |    |" << endl;
+    cout << "     4 |    | " << checkPos(1, 4, red, black) << " |    | " << checkPos(3, 4, red, black) << " |    | " << checkPos(5, 4, red, black) << " |" << endl;
+    cout << "       |____|____|____|____|____|____|" << endl;
+    cout << "       |    |    |    |    |    |    |" << endl;
+    cout << "     3 | " << checkPos(0, 3, red, black) << " |    | " << checkPos(2, 3, red, black) << " |    | " << checkPos(4, 3, red, black) << " |    |" << endl;
+    cout << "       |____|____|____|____|____|____|" << endl;
+    cout << "       |    |    |    |    |    |    |" << endl;
+    cout << "     2 |    | " << checkPos(1, 2, red, black) << " |    | " << checkPos(3, 2, red, black) << " |    | " << checkPos(5, 2, red, black) << " |" << endl;
+    cout << "       |____|____|____|____|____|____|" << endl;
+    cout << "       |    |    |    |    |    |    |" << endl;
+    cout << "     1 | " << checkPos(0, 1, red, black) << " |    | " << checkPos(2, 1, red, black) << " |    | " << checkPos(4, 1, red, black) << " |    |" << endl;
+    cout << "       |____|____|____|____|____|____|" << endl;
+    cout << "       |    |    |    |    |    |    |" << endl;
+    cout << "     0 |    | " << checkPos(1, 0, red, black) << " |    | " << checkPos(3, 0, red, black) << " |    | " << checkPos(5, 0, red, black) << " |" << endl;
+    cout << "       |____|____|____|____|____|____|" << endl;
+    cout << "         0    1    2    3    4    5   \n" << endl;
 }
 
 void initializePieces(int red[][6], int black[][6])
@@ -119,7 +119,7 @@ void playGame(int red[][6], int black[][6], int &redPoints, int &blackPoints)
         //** Ask Red Player where to move piece after validity checks
         do{
 
-            cout << "Red Player, select the place to move your piece(i.e. x y)(-1 -1 to pass): ";
+            cout << "Red Player, select the place to move your piece(i.e. x y)(-1 -1 to pass on your turn): ";
             cin >> newX 
                 >> newY;
             cout << endl;
@@ -159,10 +159,11 @@ void playGame(int red[][6], int black[][6], int &redPoints, int &blackPoints)
             //*** Ask Red Player to try again.
             }while(notValid);
 
-            ///**Tell user the points tally
-            cout << "Red Points: " << redPoints;
-            cout << "Black Points: " << blackPoints;
-            printBoard(red, black);
+            ///**Tell user the points tally & print board
+            cout << "\nRed Player Points: " << redPoints << endl;
+            cout << "\nBlack Player Points: " << blackPoints << endl;
+
+            //cout << "\n==================Next Player Turn Below====================================" << endl << endl;
 
             //*Check if Red Player has won
             //** Check Amount of points Red Player has and compare it to the amount to win
@@ -206,7 +207,7 @@ void playGame(int red[][6], int black[][6], int &redPoints, int &blackPoints)
 
         //** Ask Black Player where to move piece
         do{
-            cout << "Black Player, select the place to move your piece(i.e. x y)(-1 -1 to pass): ";
+            cout << "Black Player, select the place to move your piece(i.e. x y)(-1 -1 to pass on your turn): ";
             cin >> newX >> newY;
             cout << endl;
             //*** If the position to move piece is -1 -1
@@ -242,8 +243,8 @@ void playGame(int red[][6], int black[][6], int &redPoints, int &blackPoints)
         //*** Ask Black Player to try again.
         }while(notValid);
 
-        cout << "\nRed Points: " << redPoints << endl;
-        cout << "Black Points: " << blackPoints << endl;
+        cout << "\nRed Player Points: " << redPoints << endl;
+        cout << "\nBlack Player Points: " << blackPoints << endl;
 
         //*Check if Black Player has won
         if(blackPoints >= 3)
@@ -263,7 +264,9 @@ void playGame(int red[][6], int black[][6], int &redPoints, int &blackPoints)
 //** Call Functions in main **
 int main()
 {
-    cout << "Assignment #5, Stepwise Refinement Checkers" << endl;
+    cout << endl << "=============================================" << endl;
+    cout << "Stepwise Refinement 6x6 Checkers" << endl;
+     cout << "=============================================" << endl;
     int red[6][6];
     int black[6][6];
     int redPoints = 0;
