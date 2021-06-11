@@ -6,9 +6,7 @@
 Made with ![](https://img.shields.io/badge/C%2B%2B-00599C?&logo=c%2B%2B&logoColor=white)
  
 
-This is a simple 6x6 game of checkers. 
-
-The game goes as follows:
+This is a simple 6x6 game of checkers. The game goes as follows:
 
 - First: Ask the red player to select a piece to move. 
 - Next, make sure that they have selected a valid piece 
