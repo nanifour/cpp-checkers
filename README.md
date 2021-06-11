@@ -6,7 +6,7 @@
 Made with ![](https://img.shields.io/badge/C%2B%2B-00599C?&logo=c%2B%2B&logoColor=white)
  
 
-This is a simple 6x6 game of checkers. Stepwise Refinement was used to create this game.
+This is a simple 6x6 game of checkers. 
 
 The game goes as follows:
 
