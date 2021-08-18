@@ -16,8 +16,8 @@ This is a simple 6x6 game of checkers. The game goes as follows:
  - The black piece player follows the same steps as above, alternating turns until a winner has been found. 
 
 
----
-## Running the Program
+
+## 2 Running the Program
 ```zsh
 $  g++ -o game main.cpp
 ```
@@ -34,8 +34,8 @@ This will create and executable called game.exe
     - by opening the executable file itself
 
 
----
-## Gameplay
+
+## 3 Gameplay
 
 *This game follows the same rules as [**checkers**](https://www.itsyourturn.com/t_helptopic2030.html) but with minor differences.*
 
@@ -54,6 +54,7 @@ other
 
 :zap:You are not forced to jump a piece given the opportunity
 
+## 4 Screenshots
 
 > The start of the game (red piece player always goes first)
 ![screenshot](images/start.png)
